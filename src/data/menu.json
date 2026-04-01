@@ -3,7 +3,7 @@
     {
       "category": "☕ Café & Chaud",
       "title": "Cappuccino Madelina",
-      "price": 4.0,
+      "price": 14,
       "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=800&auto=format&fit=crop",
       "description": "Notre signature : un cappuccino classique avec un art latte en forme de fleur, saupoudré de cacao pur."
     },
@@ -17,9 +17,9 @@
     {
       "category": "🥤 Jus & Frais",
       "title": "Smoothie Fruits Rouges",
-      "price": 7.5,
-      "description": "Fraises, framboises et myrtilles mixés avec du yaourt grec. Frais, épais et plein d'énergie.",
-      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+      "price": 0,
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop",
+      "description": "alou"
     },
     {
       "category": "🥤 Jus & Frais",
