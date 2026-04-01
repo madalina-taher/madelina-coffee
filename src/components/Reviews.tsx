@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -44,6 +44,7 @@ export const Reviews = () => {
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               className="text-madelina-mustard font-bold text-xs uppercase tracking-[0.3em] mb-6 block"
             >
               Témoignages
@@ -51,6 +52,7 @@ export const Reviews = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-5xl md:text-7xl mb-6"
             >
               L'Expérience <span className="italic text-madelina-terracotta">Madelina</span> vue par vous

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Phone, Calendar, ArrowDown } from 'lucide-react';
 
@@ -19,6 +19,7 @@ export const Hero = () => {
           alt="Madelina Coffee Shop Interior" 
           className="w-full h-full object-cover scale-110"
           referrerPolicy="no-referrer"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-madelina-cream via-madelina-cream/80 to-transparent"></div>
       </motion.div>

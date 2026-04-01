@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
 

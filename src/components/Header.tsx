@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Phone, Menu as MenuIcon, X } from 'lucide-react';
 import { motion, useScroll, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
@@ -55,17 +55,20 @@ export const Header = () => {
                 </Link>
               </motion.div>
             ) : (
-              <motion.a 
+              <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * i }}
-                href={`#${item.id}`} 
-                className="relative hover:text-madelina-terracotta transition-colors group"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-madelina-terracotta transition-all group-hover:w-full"></span>
-              </motion.a>
+                <Link 
+                  to={`/#${item.id}`}
+                  className="relative hover:text-madelina-terracotta transition-colors group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-madelina-terracotta transition-all group-hover:w-full"></span>
+                </Link>
+              </motion.div>
             )
           ))}
         </nav>
@@ -124,14 +127,14 @@ export const Header = () => {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
+                  <Link
                     key={item.id}
-                    href={`#${item.id}`}
+                    to={`/#${item.id}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-2xl font-display text-madelina-navy hover:text-madelina-terracotta transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )
               ))}
               <div className="h-px bg-madelina-terracotta/10 my-4"></div>

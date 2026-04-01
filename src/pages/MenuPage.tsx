@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import menuData from '../data/menu.json';
 import { motion, AnimatePresence } from 'motion/react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
+interface MenuItem {
+  category: string;
+  title: string;
+  price: number;
+  image?: string;
+  description?: string;
+}
+
 const MenuPage = () => {
-  // 1. Data handling
-  const plats = menuData?.plats || [];
+  const plats: MenuItem[] = menuData?.plats || [];
   const categories = Array.from(new Set(plats.map(item => item.category)));
   
-  // 2. State
   const [activeCategory, setActiveCategory] = useState("");
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
 
   useEffect(() => {
     if (categories.length > 0 && !activeCategory) {
@@ -43,6 +50,7 @@ const MenuPage = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-5xl md:text-7xl mb-6 font-display text-madelina-navy"
             >
               La Carte <span className="text-madelina-terracotta italic font-display">Madelina</span>
@@ -88,17 +96,20 @@ const MenuPage = () => {
                   className="group glass-card rounded-[2.5rem] overflow-hidden bg-white border border-madelina-terracotta/5 shadow-sm hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="relative h-72 overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                     <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg">
                       <span className="font-bold text-madelina-terracotta tracking-tight">
-                        {typeof item.price === 'number' ? item.price.toFixed(3) : item.price} DT
+                        {typeof item.price === 'number' ? item.price.toFixed(1) : item.price} DT
                       </span>
                     </div>
                   </div>
                   <div className="p-8">
                     <h3 className="text-2xl mb-3 font-display text-madelina-navy group-hover:text-madelina-terracotta transition-colors">{item.title}</h3>
                     <p className="text-madelina-navy/60 text-sm mb-6 line-clamp-3">{item.description}</p>
-                    <button className="text-[10px] font-bold uppercase tracking-[0.2em] text-madelina-terracotta flex items-center gap-2">
+                    <button 
+                      onClick={() => setSelectedItem(item)}
+                      className="text-[10px] font-bold uppercase tracking-[0.2em] text-madelina-terracotta flex items-center gap-2 hover:gap-4 transition-all cursor-pointer"
+                    >
                       Détails <span>→</span>
                     </button>
                   </div>
@@ -108,6 +119,52 @@ const MenuPage = () => {
           </motion.div>
         </div>
       </main>
+
+      {/* Detail Modal */}
+      <AnimatePresence>
+        {selectedItem && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setSelectedItem(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 30 }}
+              transition={{ type: "spring", bounce: 0.2 }}
+              className="bg-white rounded-[2rem] overflow-hidden max-w-lg w-full shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {selectedItem.image && (
+                <div className="h-64 overflow-hidden">
+                  <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-full object-cover" />
+                </div>
+              )}
+              <div className="p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-3xl font-display text-madelina-navy">{selectedItem.title}</h3>
+                  <span className="bg-madelina-terracotta/10 text-madelina-terracotta font-bold px-4 py-2 rounded-full text-sm whitespace-nowrap ml-4">
+                    {typeof selectedItem.price === 'number' ? selectedItem.price.toFixed(1) : selectedItem.price} DT
+                  </span>
+                </div>
+                <p className="text-sm text-madelina-navy/40 uppercase tracking-widest font-bold mb-4">{selectedItem.category}</p>
+                {selectedItem.description && (
+                  <p className="text-madelina-navy/70 leading-relaxed mb-6">{selectedItem.description}</p>
+                )}
+                <button
+                  onClick={() => setSelectedItem(null)}
+                  className="w-full py-3 bg-madelina-navy text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-madelina-terracotta transition-colors"
+                >
+                  Fermer
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>

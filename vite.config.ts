@@ -1,25 +1,48 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig } from 'vite';
 
-export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
-  return {
-    plugins: [react(), tailwindcss()],
-    base: '/madelina-coffee/',
-    define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-    },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+    {
+      name: 'madelina-api',
+      configureServer(server) {
+        server.middlewares.use('/api/save-menu', async (req, res) => {
+          if (req.method !== 'POST') {
+            res.writeHead(405, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: 'Method not allowed' }));
+            return;
+          }
+          let body = '';
+          req.on('data', (chunk: Buffer) => { body += chunk.toString(); });
+          req.on('end', async () => {
+            try {
+              const { writeFile } = await import('fs/promises');
+              const menuPath = path.resolve(__dirname, 'src/data/menu.json');
+              const parsed = JSON.parse(body);
+              await writeFile(menuPath, JSON.stringify(parsed, null, 2), 'utf-8');
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ ok: true, items: parsed.plats?.length ?? 0 }));
+            } catch (err: any) {
+              res.writeHead(400, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ error: err.message }));
+            }
+          });
+        });
       },
     },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
+  ],
+  base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '.'),
     },
-  };
+  },
+  server: {
+    port: 3000,
+    hmr: process.env.DISABLE_HMR !== 'true',
+  },
 });

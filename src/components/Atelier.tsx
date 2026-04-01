@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'motion/react';
 
 export const Atelier = () => {
@@ -21,12 +21,14 @@ export const Atelier = () => {
                   alt="Coffee Craft" 
                   className="rounded-3xl shadow-lg w-full h-64 object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <img 
                   src="https://images.unsplash.com/photo-1559925393-8be0ec41b5ec?q=80&w=800&auto=format&fit=crop" 
                   alt="Vintage Vibe" 
                   className="rounded-3xl shadow-lg w-full h-80 object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
               <div className="space-y-4">
@@ -35,12 +37,14 @@ export const Atelier = () => {
                   alt="Pastry Art" 
                   className="rounded-3xl shadow-lg w-full h-80 object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <img 
                   src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" 
                   alt="Cozy Corner" 
                   className="rounded-3xl shadow-lg w-full h-64 object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
             </div>

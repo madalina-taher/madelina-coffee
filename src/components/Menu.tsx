@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import menuData from '../data/menu.json';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -90,10 +90,10 @@ export const Menu = ({ isPreview = false }: { isPreview?: boolean }) => {
                   className="group glass-card rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white border border-madelina-terracotta/5"
                 >
                   <div className="relative h-72 overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                     <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg">
                       <span className="font-bold text-madelina-terracotta tracking-tight">
-                        {typeof item.price === 'number' ? item.price.toFixed(3) : item.price} DT
+                        {typeof item.price === 'number' ? item.price.toFixed(1) : item.price} DT
                       </span>
                     </div>
                   </div>
