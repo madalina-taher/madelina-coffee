@@ -1,8 +1,10 @@
-local_backend: false
-# Baddel hethom fel config.yml
 backend:
-  name: git-gateway
-  branch: main # Thabbet ennou esm el branch mte3ek 'main'
+  name: github
+  repo: madalina-taher/madelina-coffee
+  branch: main
+  auth_type: implicit 
+
+local_backend: false # Khalliha false dima fel GitHub
 
 media_folder: "public/images/menu"
 public_folder: "/images/menu"
@@ -20,7 +22,6 @@ collections:
           - label: "La Carte"
             name: "plats"
             widget: "list"
-            # Houni el summary raddineh "Icon | Name | Price"
             summary: '{{fields.category}} ➔ {{fields.title}} ({{fields.price}} DT)'
             add_to_top: true
             fields:
@@ -42,9 +43,10 @@ collections:
                 widget: "number"
                 value_type: "float"
               
-              - label: "Photo"
+              - label: "Lien de la Photo (URL)"
                 name: "image"
-                widget: "image"
+                widget: "string" # Rod'ha string bech t'7at link ImgBB wala Cloudinary direct
+                hint: "Uploadi e-taswira f'Cloudinary w 7ot el link houni bech ma takolch el bandwidth."
               
               - label: "Description"
                 name: "description"
