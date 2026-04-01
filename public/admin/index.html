@@ -435,8 +435,8 @@
       font-size: 14px;
     }
 
-    /* ── MODAL ── */
-    #modal-overlay {
+    #modal-overlay,
+    #settings-overlay {
       display: none;
       position: fixed;
       inset: 0;
@@ -448,7 +448,8 @@
       padding: 20px;
     }
 
-    #modal-overlay.open {
+    #modal-overlay.open,
+    #settings-overlay.open {
       display: flex;
     }
 
@@ -599,6 +600,7 @@
         </div>
       </div>
       <div class="header-actions">
+        <button class="btn btn-secondary" onclick="openSettings()" title="GitHub Settings">⚙️</button>
         <a href="/" class="btn btn-secondary" target="_blank">⬡ Voir le site</a>
         <button class="btn btn-primary" onclick="openModal(null)">+ Ajouter un plat</button>
       </div>
@@ -682,6 +684,30 @@
     </div>
   </div>
 
+  <!-- GITHUB SETTINGS MODAL -->
+  <div class="modal-overlay" id="settings-overlay" onclick="if(event.target===this)closeSettings()">
+    <div class="modal" style="max-width:440px">
+      <h3>⚙️ GitHub Settings</h3>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px">Configurez la connexion GitHub pour sauvegarder le menu en ligne. Le token est stocké localement dans votre navigateur.</p>
+      <div class="form-group">
+        <label>GitHub Owner</label>
+        <input id="gh-owner" placeholder="madalina-taher" />
+      </div>
+      <div class="form-group">
+        <label>GitHub Repo</label>
+        <input id="gh-repo" placeholder="madelina-coffee" />
+      </div>
+      <div class="form-group">
+        <label>GitHub Token (fine-grained, contents:write)</label>
+        <input id="gh-token" type="password" placeholder="github_pat_..." />
+      </div>
+      <div style="display:flex;gap:10px;margin-top:24px">
+        <button class="btn btn-primary" style="flex:1" onclick="saveSettings()">💾 Enregistrer</button>
+        <button class="btn btn-secondary" style="flex:1" onclick="closeSettings()">Fermer</button>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST -->
   <div id="toast"></div>
 
@@ -689,13 +715,43 @@
     // ── STATE ──
     let menuData = { plats: [] };
     let activeFilter = 'all';
+    let fileSHA = null;
     const PASS = 'password';
+    const GH_FILE_PATH = 'src/data/menu.json';
 
-    // ── GATE ──
+    // ── GITHUB SETTINGS ──
+    function getGH() {
+      return {
+        owner: localStorage.getItem('gh_owner') || 'madalina-taher',
+        repo: localStorage.getItem('gh_repo') || 'madelina-coffee',
+        token: localStorage.getItem('gh_token') || '',
+      };
+    }
+
+    function openSettings() {
+      const gh = getGH();
+      document.getElementById('gh-owner').value = gh.owner;
+      document.getElementById('gh-repo').value = gh.repo;
+      document.getElementById('gh-token').value = gh.token;
+      document.getElementById('settings-overlay').classList.add('open');
+    }
+
+    function closeSettings() {
+      document.getElementById('settings-overlay').classList.remove('open');
+    }
+
+    function saveSettings() {
+      localStorage.setItem('gh_owner', document.getElementById('gh-owner').value.trim());
+      localStorage.setItem('gh_repo', document.getElementById('gh-repo').value.trim());
+      localStorage.setItem('gh_token', document.getElementById('gh-token').value.trim());
+      closeSettings();
+      toast('✅ Paramètres GitHub enregistrés !', 'success');
+    }
+
     function unlock() {
-      const val = document.getElementById('pass-field').value;
+      const inp = document.getElementById('pass-field');
       const err = document.getElementById('gate-error');
-      if (val === PASS) {
+      if (inp.value === PASS) {
         document.getElementById('gate').style.display = 'none';
         document.getElementById('app').style.display = 'block';
         loadMenu();
@@ -706,11 +762,30 @@
       }
     }
 
-    // ── LOAD MENU (fetch from the site itself) ──
+    // ── LOAD MENU (GitHub API first, then fallback) ──
     async function loadMenu() {
+      const gh = getGH();
+      // Try GitHub API first (to get SHA for updates)
+      if (gh.token) {
+        try {
+          const res = await fetch(`https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/${GH_FILE_PATH}`, {
+            headers: { 'Authorization': `Bearer ${gh.token}`, 'Accept': 'application/vnd.github.v3+json' }
+          });
+          if (res.ok) {
+            const data = await res.json();
+            fileSHA = data.sha;
+            const content = atob(data.content.replace(/\n/g, ''));
+            menuData = JSON.parse(content);
+            render();
+            toast('📡 Menu chargé depuis GitHub', 'success');
+            return;
+          }
+        } catch (e) { console.warn('GitHub API load failed:', e); }
+      }
+      // Fallback: fetch from site
       try {
         const res = await fetch('/src/data/menu.json');
-        if (!res.ok) throw new Error('Cannot load menu');
+        if (!res.ok) throw new Error('not found');
         menuData = await res.json();
       } catch (e) {
         try {
@@ -718,7 +793,7 @@
           menuData = await res2.json();
         } catch (e2) {
           menuData = { plats: [] };
-          toast('Impossible de charger menu.json — mode démo', 'error');
+          toast('⚠️ Configurez GitHub (⚙️) pour charger le menu', 'error');
         }
       }
       render();
@@ -878,29 +953,71 @@
       toast('⬇ Backup téléchargé !', 'success');
     }
 
-    // ── SAVE TO FILE via Vite API ──
+    // ── SAVE: GitHub API (remote) or Vite API (local) ──
     async function saveToFile() {
       const btn = document.getElementById('save-btn');
       const orig = btn.textContent;
       btn.textContent = '⏳ Sauvegarde...';
       btn.disabled = true;
+
+      const gh = getGH();
+      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
       try {
-        const res = await fetch('/api/save-menu', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(menuData),
-        });
-        const data = await res.json();
-        if (data.ok) {
-          btn.textContent = '✅ Sauvegardé !';
-          toast(`✅ Menu sauvegardé — ${data.items} plats enregistrés dans menu.json`, 'success');
-          setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 2000);
+        if (gh.token && !isLocal) {
+          // ── GITHUB API SAVE ──
+          const content = btoa(unescape(encodeURIComponent(JSON.stringify(menuData, null, 2))));
+          
+          // Get latest SHA if we don't have it
+          if (!fileSHA) {
+            const shaRes = await fetch(`https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/${GH_FILE_PATH}`, {
+              headers: { 'Authorization': `Bearer ${gh.token}`, 'Accept': 'application/vnd.github.v3+json' }
+            });
+            if (shaRes.ok) {
+              const shaData = await shaRes.json();
+              fileSHA = shaData.sha;
+            }
+          }
+
+          const res = await fetch(`https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/${GH_FILE_PATH}`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${gh.token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: `🍽️ Menu mis à jour (${menuData.plats.length} plats)`,
+              content: content,
+              sha: fileSHA,
+            }),
+          });
+
+          if (!res.ok) {
+            const errData = await res.json();
+            throw new Error(errData.message || `GitHub API error ${res.status}`);
+          }
+
+          const result = await res.json();
+          fileSHA = result.content.sha;
+          btn.textContent = '✅ Publié !';
+          toast(`✅ Menu publié sur GitHub — ${menuData.plats.length} plats. Le site se met à jour dans ~1min.`, 'success');
         } else {
-          throw new Error(data.error || 'Erreur inconnue');
+          // ── LOCAL VITE API SAVE ──
+          const res = await fetch('/api/save-menu', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(menuData),
+          });
+          const data = await res.json();
+          if (!data.ok) throw new Error(data.error || 'Erreur inconnue');
+          btn.textContent = '✅ Sauvegardé !';
+          toast(`✅ Menu sauvegardé — ${data.items} plats enregistrés`, 'success');
         }
+        setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 2500);
       } catch (err) {
         btn.textContent = '❌ Erreur';
-        toast('❌ Échec de la sauvegarde : ' + err.message, 'error');
+        toast('❌ ' + err.message, 'error');
         setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 3000);
       }
     }
