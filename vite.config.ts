@@ -35,7 +35,7 @@ export default defineConfig({
       },
     },
   ],
-  base: '/',
+  base: '/madelina-coffee/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
