@@ -1,87 +1,80 @@
 {
   "plats": [
     {
-      "category": "☕ Café & Chaud",
-      "title": "Cappuccino Madelina",
-      "price": 4.5,
-      "description": "Notre signature : un cappuccino classique avec un art latte en forme de fleur, saupoudré de cacao pur.",
-      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "☕ Café & Chaud",
+      "category": "â CafÃ© & Chaud",
       "title": "Chocolat Chaud Artisanal",
       "price": 2.2,
       "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=800&auto=format&fit=crop",
-      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, réconfortant et inoubliable."
+      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, rÃ©confortant et inoubliable."
     },
     {
       "category": "🥤 Jus & Frais",
-      "title": "Jus d'Orange Pressé",
-      "price": 5,
-      "description": "Oranges fraîches pressées à la minute. Vitaminé, naturel et sans sucre ajouté.",
-      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop"
+      "title": "Jus d'Orange PressÃ©",
+      "price": 10000,
+      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop",
+      "description": "Oranges fraÃ®ches pressÃ©es Ã  la minute. VitaminÃ©, naturel et sans sucre ajoutÃ©."
     },
     {
-      "category": "🥤 Jus & Frais",
+      "category": "ð¥¤ Jus & Frais",
       "title": "Smoothie Fruits Rouges",
       "price": 7.5,
-      "description": "Fraises, framboises et myrtilles mixés avec du yaourt grec. Frais, épais et plein d'énergie.",
+      "description": "Fraises, framboises et myrtilles mixÃ©s avec du yaourt grec. Frais, Ã©pais et plein d'Ã©nergie.",
       "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🥤 Jus & Frais",
+      "category": "ð¥¤ Jus & Frais",
       "title": "Limonade Menthe Concombre",
       "price": 6,
-      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se désaltérer.",
+      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se dÃ©saltÃ©rer.",
       "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop"
     },
     {
       "category": "🍳 Brunch & Plats",
-      "title": "Le Grand Petit Déjeuner",
+      "title": "Le Grand Petit DÃ©jeuner",
       "price": 17.5,
-      "description": "Œufs brouillés, saucisses artisanales, haricots blancs en sauce, salade fraîche et toasts grillés au beurre.",
-      "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop",
+      "description": "Åufs brouillÃ©s, saucisses artisanales, haricots blancs en sauce, salade fraÃ®che et toasts grillÃ©s au beurre."
     },
     {
-      "category": "🍳 Brunch & Plats",
+      "category": "ð³ Brunch & Plats",
       "title": "Avocado Toast Madelina",
       "price": 13,
-      "description": "Pain de campagne grillé, avocat frais écrasé, œuf poché, graines de sésame et vinaigrette citron.",
+      "description": "Pain de campagne grillÃ©, avocat frais Ã©crasÃ©, Åuf pochÃ©, graines de sÃ©same et vinaigrette citron.",
       "image": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🍳 Brunch & Plats",
+      "category": "ð³ Brunch & Plats",
       "title": "Croque Madame",
       "price": 11,
-      "description": "Pain brioché, jambon artisanal, béchamel maison, gruyère fondu et œuf au plat. Le classique revisité.",
+      "description": "Pain briochÃ©, jambon artisanal, bÃ©chamel maison, gruyÃ¨re fondu et Åuf au plat. Le classique revisitÃ©.",
       "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🍰 Pâtisseries",
+      "category": "ð° PÃ¢tisseries",
       "title": "Fraisier Madelina",
       "price": 9,
-      "description": "Biscuit moelleux, crème mousseline vanillée et fraises fraîches de saison. Notre pâtisserie signature.",
+      "description": "Biscuit moelleux, crÃ¨me mousseline vanillÃ©e et fraises fraÃ®ches de saison. Notre pÃ¢tisserie signature.",
       "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🍰 Pâtisseries",
-      "title": "Tarte au Citron Meringuée",
+      "category": "ð° PÃ¢tisseries",
+      "title": "Tarte au Citron MeringuÃ©e",
       "price": 8,
-      "description": "Pâte sablée maison, crème citronnée acidulée et meringue italienne dorée au chalumeau.",
+      "description": "PÃ¢te sablÃ©e maison, crÃ¨me citronnÃ©e acidulÃ©e et meringue italienne dorÃ©e au chalumeau.",
       "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🍰 Pâtisseries",
-      "title": "Éclair au Chocolat",
+      "category": "ð° PÃ¢tisseries",
+      "title": "Ãclair au Chocolat",
       "price": 6.5,
-      "description": "Pâte à choux légère, crème pâtissière au chocolat noir et glaçage brillant. Un classique de la maison.",
+      "description": "PÃ¢te Ã  choux lÃ©gÃ¨re, crÃ¨me pÃ¢tissiÃ¨re au chocolat noir et glaÃ§age brillant. Un classique de la maison.",
       "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "🍰 Pâtisseries",
+      "category": "ð° PÃ¢tisseries",
       "title": "Croissant Beurre",
       "price": 4,
-      "description": "Feuilletage pur beurre, croustillant à l'extérieur et fondant à l'intérieur. Cuit frais chaque matin.",
+      "description": "Feuilletage pur beurre, croustillant Ã  l'extÃ©rieur et fondant Ã  l'intÃ©rieur. Cuit frais chaque matin.",
       "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop"
     }
   ]
