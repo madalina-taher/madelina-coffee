@@ -1,80 +1,87 @@
 {
   "plats": [
     {
-      "category": "ÃÂ¢ÃÂÃÂ CafÃÂÃÂ© & Chaud",
+      "category": "☕ Café & Chaud",
+      "title": "Cappuccino Madelina",
+      "price": 4.5,
+      "description": "Notre signature : un cappuccino classique avec un art latte en forme de fleur, saupoudré de cacao pur.",
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "☕ Café & Chaud",
       "title": "Chocolat Chaud Artisanal",
       "price": 2.2,
       "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=800&auto=format&fit=crop",
-      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, rÃÂÃÂ©confortant et inoubliable."
-    },
-    {
-      "category": "Ã°ÂÂ¥Â¤ Jus & Frais",
-      "title": "Jus d'Orange PressÃÂÃÂ©",
-      "price": 10000,
-      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop",
-      "description": "Oranges fraÃÂÃÂ®ches pressÃÂÃÂ©es ÃÂÃÂ  la minute. VitaminÃÂÃÂ©, naturel et sans sucre ajoutÃÂÃÂ©."
-    },
-    {
-      "category": "ÃÂ°ÃÂÃÂ¥ÃÂ¤ Jus & Frais",
-      "title": "Smoothie Fruits Rouges",
-      "price": 7.5,
-      "description": "Fraises, framboises et myrtilles mixÃÂÃÂ©s avec du yaourt grec. Frais, ÃÂÃÂ©pais et plein d'ÃÂÃÂ©nergie.",
-      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "ÃÂ°ÃÂÃÂ¥ÃÂ¤ Jus & Frais",
-      "title": "Limonade Menthe Concombre",
-      "price": 6,
-      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se dÃÂÃÂ©saltÃÂÃÂ©rer.",
-      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "Ã°ÂÂÂ³ Brunch & Plats",
-      "title": "Le Grand Petit DÃÂÃÂ©jeuner",
-      "price": 17.5,
-      "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop",
-      "description": "ÃÂÃÂufs brouillÃÂÃÂ©s, saucisses artisanales, haricots blancs en sauce, salade fraÃÂÃÂ®che et toasts grillÃÂÃÂ©s au beurre."
-    },
-    {
-      "category": "ÃÂ°ÃÂÃÂÃÂ³ Brunch & Plats",
-      "title": "Avocado Toast Madelina",
-      "price": 13,
-      "description": "Pain de campagne grillÃÂÃÂ©, avocat frais ÃÂÃÂ©crasÃÂÃÂ©, ÃÂÃÂuf pochÃÂÃÂ©, graines de sÃÂÃÂ©same et vinaigrette citron.",
-      "image": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "ÃÂ°ÃÂÃÂÃÂ³ Brunch & Plats",
-      "title": "Croque Madame",
-      "price": 11,
-      "description": "Pain briochÃÂÃÂ©, jambon artisanal, bÃÂÃÂ©chamel maison, gruyÃÂÃÂ¨re fondu et ÃÂÃÂuf au plat. Le classique revisitÃÂÃÂ©.",
-      "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
-      "title": "Fraisier Madelina",
-      "price": 9,
-      "description": "Biscuit moelleux, crÃÂÃÂ¨me mousseline vanillÃÂÃÂ©e et fraises fraÃÂÃÂ®ches de saison. Notre pÃÂÃÂ¢tisserie signature.",
-      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop"
+      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, réconfortant et inoubliable."
     },
     {
       "category": "🥤 Jus & Frais",
-      "title": "Tarte au Citron MeringuÃÂÃÂ©e",
-      "price": 100000,
-      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop",
-      "description": "PÃÂÃÂ¢te sablÃÂÃÂ©e maison, crÃÂÃÂ¨me citronnÃÂÃÂ©e acidulÃÂÃÂ©e et meringue italienne dorÃÂÃÂ©e au chalumeau."
+      "title": "Jus d'Orange Pressé",
+      "price": 5,
+      "description": "Oranges fraîches pressées à la minute. Vitaminé, naturel et sans sucre ajouté.",
+      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
-      "title": "ÃÂÃÂclair au Chocolat",
+      "category": "🥤 Jus & Frais",
+      "title": "Smoothie Fruits Rouges",
+      "price": 7.5,
+      "description": "Fraises, framboises et myrtilles mixés avec du yaourt grec. Frais, épais et plein d'énergie.",
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🥤 Jus & Frais",
+      "title": "Limonade Menthe Concombre",
+      "price": 6,
+      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se désaltérer.",
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍳 Brunch & Plats",
+      "title": "Le Grand Petit Déjeuner",
+      "price": 17.5,
+      "description": "Œufs brouillés, saucisses artisanales, haricots blancs en sauce, salade fraîche et toasts grillés au beurre.",
+      "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍳 Brunch & Plats",
+      "title": "Avocado Toast Madelina",
+      "price": 13,
+      "description": "Pain de campagne grillé, avocat frais écrasé, œuf poché, graines de sésame et vinaigrette citron.",
+      "image": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍳 Brunch & Plats",
+      "title": "Croque Madame",
+      "price": 11,
+      "description": "Pain brioché, jambon artisanal, béchamel maison, gruyère fondu et œuf au plat. Le classique revisité.",
+      "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍰 Pâtisseries",
+      "title": "Fraisier Madelina",
+      "price": 9,
+      "description": "Biscuit moelleux, crème mousseline vanillée et fraises fraîches de saison. Notre pâtisserie signature.",
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍰 Pâtisseries",
+      "title": "Tarte au Citron Meringuée",
+      "price": 8,
+      "description": "Pâte sablée maison, crème citronnée acidulée et meringue italienne dorée au chalumeau.",
+      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "category": "🍰 Pâtisseries",
+      "title": "Éclair au Chocolat",
       "price": 6.5,
-      "description": "PÃÂÃÂ¢te ÃÂÃÂ  choux lÃÂÃÂ©gÃÂÃÂ¨re, crÃÂÃÂ¨me pÃÂÃÂ¢tissiÃÂÃÂ¨re au chocolat noir et glaÃÂÃÂ§age brillant. Un classique de la maison.",
+      "description": "Pâte à choux légère, crème pâtissière au chocolat noir et glaçage brillant. Un classique de la maison.",
       "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
+      "category": "🍰 Pâtisseries",
       "title": "Croissant Beurre",
       "price": 4,
-      "description": "Feuilletage pur beurre, croustillant ÃÂÃÂ  l'extÃÂÃÂ©rieur et fondant ÃÂÃÂ  l'intÃÂÃÂ©rieur. Cuit frais chaque matin.",
+      "description": "Feuilletage pur beurre, croustillant à l'extérieur et fondant à l'intérieur. Cuit frais chaque matin.",
       "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop"
     }
   ]
