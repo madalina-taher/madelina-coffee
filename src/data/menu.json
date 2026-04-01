@@ -1,80 +1,80 @@
 {
   "plats": [
     {
-      "category": "Ã¢ÂÂ CafÃÂ© & Chaud",
+      "category": "ÃÂ¢ÃÂÃÂ CafÃÂÃÂ© & Chaud",
       "title": "Chocolat Chaud Artisanal",
       "price": 2.2,
       "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=800&auto=format&fit=crop",
-      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, rÃÂ©confortant et inoubliable."
-    },
-    {
-      "category": "ð¥¤ Jus & Frais",
-      "title": "Jus d'Orange PressÃÂ©",
-      "price": 10000,
-      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop",
-      "description": "Oranges fraÃÂ®ches pressÃÂ©es ÃÂ  la minute. VitaminÃÂ©, naturel et sans sucre ajoutÃÂ©."
+      "description": "Chocolat noir 70% fondu avec du lait entier chaud. Onctueux, rÃÂÃÂ©confortant et inoubliable."
     },
     {
       "category": "Ã°ÂÂ¥Â¤ Jus & Frais",
+      "title": "Jus d'Orange PressÃÂÃÂ©",
+      "price": 10000,
+      "image": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=800&auto=format&fit=crop",
+      "description": "Oranges fraÃÂÃÂ®ches pressÃÂÃÂ©es ÃÂÃÂ  la minute. VitaminÃÂÃÂ©, naturel et sans sucre ajoutÃÂÃÂ©."
+    },
+    {
+      "category": "ÃÂ°ÃÂÃÂ¥ÃÂ¤ Jus & Frais",
       "title": "Smoothie Fruits Rouges",
       "price": 7.5,
-      "description": "Fraises, framboises et myrtilles mixÃÂ©s avec du yaourt grec. Frais, ÃÂ©pais et plein d'ÃÂ©nergie.",
+      "description": "Fraises, framboises et myrtilles mixÃÂÃÂ©s avec du yaourt grec. Frais, ÃÂÃÂ©pais et plein d'ÃÂÃÂ©nergie.",
       "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "Ã°ÂÂ¥Â¤ Jus & Frais",
+      "category": "ÃÂ°ÃÂÃÂ¥ÃÂ¤ Jus & Frais",
       "title": "Limonade Menthe Concombre",
       "price": 6,
-      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se dÃÂ©saltÃÂ©rer.",
+      "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se dÃÂÃÂ©saltÃÂÃÂ©rer.",
       "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "ð³ Brunch & Plats",
-      "title": "Le Grand Petit DÃÂ©jeuner",
+      "category": "Ã°ÂÂÂ³ Brunch & Plats",
+      "title": "Le Grand Petit DÃÂÃÂ©jeuner",
       "price": 17.5,
       "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop",
-      "description": "ÃÂufs brouillÃÂ©s, saucisses artisanales, haricots blancs en sauce, salade fraÃÂ®che et toasts grillÃÂ©s au beurre."
+      "description": "ÃÂÃÂufs brouillÃÂÃÂ©s, saucisses artisanales, haricots blancs en sauce, salade fraÃÂÃÂ®che et toasts grillÃÂÃÂ©s au beurre."
     },
     {
-      "category": "Ã°ÂÂÂ³ Brunch & Plats",
+      "category": "ÃÂ°ÃÂÃÂÃÂ³ Brunch & Plats",
       "title": "Avocado Toast Madelina",
       "price": 13,
-      "description": "Pain de campagne grillÃÂ©, avocat frais ÃÂ©crasÃÂ©, ÃÂuf pochÃÂ©, graines de sÃÂ©same et vinaigrette citron.",
+      "description": "Pain de campagne grillÃÂÃÂ©, avocat frais ÃÂÃÂ©crasÃÂÃÂ©, ÃÂÃÂuf pochÃÂÃÂ©, graines de sÃÂÃÂ©same et vinaigrette citron.",
       "image": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "Ã°ÂÂÂ³ Brunch & Plats",
+      "category": "ÃÂ°ÃÂÃÂÃÂ³ Brunch & Plats",
       "title": "Croque Madame",
       "price": 11,
-      "description": "Pain briochÃÂ©, jambon artisanal, bÃÂ©chamel maison, gruyÃÂ¨re fondu et ÃÂuf au plat. Le classique revisitÃÂ©.",
+      "description": "Pain briochÃÂÃÂ©, jambon artisanal, bÃÂÃÂ©chamel maison, gruyÃÂÃÂ¨re fondu et ÃÂÃÂuf au plat. Le classique revisitÃÂÃÂ©.",
       "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "Ã°ÂÂÂ° PÃÂ¢tisseries",
+      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
       "title": "Fraisier Madelina",
       "price": 9,
-      "description": "Biscuit moelleux, crÃÂ¨me mousseline vanillÃÂ©e et fraises fraÃÂ®ches de saison. Notre pÃÂ¢tisserie signature.",
+      "description": "Biscuit moelleux, crÃÂÃÂ¨me mousseline vanillÃÂÃÂ©e et fraises fraÃÂÃÂ®ches de saison. Notre pÃÂÃÂ¢tisserie signature.",
       "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "Ã°ÂÂÂ° PÃÂ¢tisseries",
-      "title": "Tarte au Citron MeringuÃÂ©e",
-      "price": 8,
-      "description": "PÃÂ¢te sablÃÂ©e maison, crÃÂ¨me citronnÃÂ©e acidulÃÂ©e et meringue italienne dorÃÂ©e au chalumeau.",
-      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop"
+      "category": "🥤 Jus & Frais",
+      "title": "Tarte au Citron MeringuÃÂÃÂ©e",
+      "price": 100000,
+      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop",
+      "description": "PÃÂÃÂ¢te sablÃÂÃÂ©e maison, crÃÂÃÂ¨me citronnÃÂÃÂ©e acidulÃÂÃÂ©e et meringue italienne dorÃÂÃÂ©e au chalumeau."
     },
     {
-      "category": "Ã°ÂÂÂ° PÃÂ¢tisseries",
-      "title": "ÃÂclair au Chocolat",
+      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
+      "title": "ÃÂÃÂclair au Chocolat",
       "price": 6.5,
-      "description": "PÃÂ¢te ÃÂ  choux lÃÂ©gÃÂ¨re, crÃÂ¨me pÃÂ¢tissiÃÂ¨re au chocolat noir et glaÃÂ§age brillant. Un classique de la maison.",
+      "description": "PÃÂÃÂ¢te ÃÂÃÂ  choux lÃÂÃÂ©gÃÂÃÂ¨re, crÃÂÃÂ¨me pÃÂÃÂ¢tissiÃÂÃÂ¨re au chocolat noir et glaÃÂÃÂ§age brillant. Un classique de la maison.",
       "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=800&auto=format&fit=crop"
     },
     {
-      "category": "Ã°ÂÂÂ° PÃÂ¢tisseries",
+      "category": "ÃÂ°ÃÂÃÂÃÂ° PÃÂÃÂ¢tisseries",
       "title": "Croissant Beurre",
       "price": 4,
-      "description": "Feuilletage pur beurre, croustillant ÃÂ  l'extÃÂ©rieur et fondant ÃÂ  l'intÃÂ©rieur. Cuit frais chaque matin.",
+      "description": "Feuilletage pur beurre, croustillant ÃÂÃÂ  l'extÃÂÃÂ©rieur et fondant ÃÂÃÂ  l'intÃÂÃÂ©rieur. Cuit frais chaque matin.",
       "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop"
     }
   ]
