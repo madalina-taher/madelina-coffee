@@ -1,12 +1,6 @@
 {
   "plats": [
     {
-      "category": "☕ Café & Chaud",
-      "title": "9ahwa 3arby",
-      "price": 12,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnUYfnBdxxlqpp_eu99X0cM7XEkbpXOivVoA&s"
-    },
-    {
       "category": "🥤 Jus & Frais",
       "title": "Jus d'orange ",
       "price": 5,
