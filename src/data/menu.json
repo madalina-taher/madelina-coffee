@@ -9,8 +9,9 @@
     {
       "category": "🍰 Pâtisseries",
       "title": "fifo",
-      "price": 1000,
-      "image": "https://www.boxhero.io/en/blog/content/images/size/w1200/2024/08/iStock-2158642953.jpg"
+      "price": 9999999,
+      "image": "https://www.boxhero.io/en/blog/content/images/size/w1200/2024/08/iStock-2158642953.jpg",
+      "description": "hello test"
     },
     {
       "category": "☕ Café & Chaud",
@@ -25,13 +26,6 @@
       "price": 6,
       "description": "Citrons frais, menthe du jardin et concombre. La boisson estivale parfaite pour se désaltérer.",
       "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      "category": "🍳 Brunch & Plats",
-      "title": "Le Grand Petit Déjeuner",
-      "price": 17.5,
-      "description": "Œufs brouillés, saucisses artisanales, haricots blancs en sauce, salade fraîche et toasts grillés au beurre.",
-      "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop"
     },
     {
       "category": "🍳 Brunch & Plats",
