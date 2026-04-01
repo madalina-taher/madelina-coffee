@@ -1,6 +1,12 @@
 {
   "plats": [
     {
+      "category": "🍰 Gâteaux",
+      "title": "vfdgbhnj",
+      "price": 12345,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7zB_cFP1iMv0n8v4UFdvSdgMFdnxSa5JaQ&s"
+    },
+    {
       "category": "🥤 Jus & Frais",
       "title": "Jus d'orange ",
       "price": 5,
